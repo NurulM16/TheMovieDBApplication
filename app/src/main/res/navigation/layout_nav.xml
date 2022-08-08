@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_nav"
+    app:startDestination="@id/genreFragment">
+
+    <fragment
+        android:id="@+id/genreFragment"
+        android:name="com.gemslight.themoviedb.fragment.genre_fragment.GenreFragment"
+        android:label="GenreFragment">
+        <action
+            android:id="@+id/genre_to_discover_movie"
+            app:destination="@id/discoverMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoverMovieFragment"
+        android:name="com.gemslight.themoviedb.fragment.discover_movie_fragment.DiscoverMovieFragment"
+        android:label="DiscoverMovieFragment">
+        <argument
+            android:name="genre"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/discover_movie_to_movie_detail"
+        app:destination="@id/movieDetailFragment" />
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.gemslight.themoviedb.fragment.movie_detail_fragment.MovieDetailFragment"
+        android:label="MovieDetailFragment">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

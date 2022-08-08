@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="genre_selection_color" type="color">#9A0680</item>
+
+    <item name="genre_idle_color" type="color">#4C0070</item>
+</resources>
